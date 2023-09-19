@@ -15,6 +15,7 @@ struct ArticleDetailsScreen: View {
             VStack {
                 Text(article.title)
                     .font(.title)
+                    .multilineTextAlignment(.center)
                 AsyncImage(url: URL(string: article.urlToImage)) { image in
                     if let img = image.image {
                         img
