@@ -29,11 +29,7 @@ struct SearchBar: View {
                     
                     Button(action: {
                         Task {
-                            do {
                                 try await onClickSearch(searchText)
-                            } catch {
-                                print ("error during fetch news: \(error)")
-                            }
                         }
                     }) {
                         Text("Search!")
@@ -54,14 +50,13 @@ struct SearchBar: View {
         guard let url = URL(string: "https://newsapi.org/v2/everything?q=\(searchText)&apiKey=\(myApiKey)") else {
             throw ApiError.url
         }
+        defer {isLoading = false}
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let results = try JSONDecoder().decode(SearchResult.self, from: data)
             searchResults = results.articles
-            isLoading = false
         } catch {
             print("Error: \(error)")
-            isLoading = false
             throw ApiError.response
         }
     }

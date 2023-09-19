@@ -13,21 +13,24 @@ struct NewsSearchScreen: View {
 
 
     var body: some View {
-        VStack {
-            SearchPageTitle()
-            ZStack {
-                RoundedRectangle(cornerRadius: 4.0)
-                    .fill(.orange)
-                VStack {
-                    SearchBar(searchText: $searchText, searchResults: $searchResults)
-                        .padding(.vertical)
-                    if searchResults.count > 0 {
-                        ArticlesListView(searchText: $searchText, searchResults: $searchResults)
+        NavigationStack {
+            
+            VStack {
+                SearchPageTitle()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 4.0)
+                        .fill(Theme.orange.mainColor)
+                    VStack {
+                        SearchBar(searchText: $searchText, searchResults: $searchResults)
+                            .padding(.vertical)
+                        if searchResults.count > 0 {
+                            ArticlesListView(searchText: $searchText, searchResults: $searchResults)
+                        }
                     }
                 }
             }
+            .padding(.vertical)
         }
-        .padding(.vertical)
     }
 }
 
