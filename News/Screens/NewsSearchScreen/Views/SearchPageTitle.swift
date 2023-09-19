@@ -9,11 +9,10 @@ import SwiftUI
 
 struct SearchPageTitle: View {
     var body: some View {
-        VStack {
-            Text("This is the title")
+            Text("Best News App")
+                .font(.system(size: 30, weight: .heavy))
+                .frame(maxWidth: .infinity, alignment: .center)
         }
-        
-    }
 }
 
 struct SearchPageTitle_Previews: PreviewProvider {

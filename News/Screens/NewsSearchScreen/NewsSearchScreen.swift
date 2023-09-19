@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct NewsSearchScreen: View {
+    @State private var searchResults: [Article] = []
+    @State private var searchText: String = ""
+
+
     var body: some View {
         VStack {
             SearchPageTitle()
             ZStack {
-                RoundedRectangle(cornerRadius: 16.0)
+                RoundedRectangle(cornerRadius: 4.0)
                     .fill(.orange)
-                SearchBar()
+                VStack {
+                    SearchBar(searchText: $searchText, searchResults: $searchResults)
+                        .padding(.vertical)
+                    if searchResults.count > 0 {
+                        ArticlesListView(searchText: $searchText, searchResults: $searchResults)
+                    }
+                }
             }
         }
-        .padding()
+        .padding(.vertical)
     }
 }
 
