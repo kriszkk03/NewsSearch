@@ -11,7 +11,17 @@ struct AuthFlowContentView: View {
     @ObservedObject var userAuthModel: UserAuthModel
     
     var body: some View {
-        HStack {
+        HStack(spacing: 0.0) {
+            AsyncImage(url: URL(string: userAuthModel.profilePicUrl)) { image in
+                if let img = image.image {
+                    img
+                        .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25, height: 25)
+                            .padding(.horizontal, 5)
+                            .clipShape(Circle())
+                }
+            }
             Menu {
                 Section("User data") {
                     if(userAuthModel.isLoggedIn) {
@@ -36,7 +46,7 @@ struct AuthFlowContentView: View {
     //                Label("Delete", systemImage: "trash")
     //            }
             } label: {
-                Label("Profile", systemImage: "person.circle.fill")
+                Text("Profile")
             }
         }
     }
