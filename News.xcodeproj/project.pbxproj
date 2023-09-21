@@ -16,11 +16,15 @@
 		864D76D22AB85372006ABB85 /* NewsSearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76D12AB85372006ABB85 /* NewsSearchScreen.swift */; };
 		864D76D52AB8546A006ABB85 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76D42AB8546A006ABB85 /* SearchBar.swift */; };
 		864D76D72AB85993006ABB85 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76D62AB85993006ABB85 /* Theme.swift */; };
-		864D76D92AB85BC5006ABB85 /* SearchPageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76D82AB85BC5006ABB85 /* SearchPageTitle.swift */; };
+		864D76D92AB85BC5006ABB85 /* PageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76D82AB85BC5006ABB85 /* PageTitle.swift */; };
 		864D76DB2AB86FF9006ABB85 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76DA2AB86FF9006ABB85 /* News.swift */; };
 		864D76DD2AB981C5006ABB85 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76DC2AB981C5006ABB85 /* ArticleCardView.swift */; };
 		864D76DF2AB98C6F006ABB85 /* ArticlesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76DE2AB98C6F006ABB85 /* ArticlesListView.swift */; };
 		864D76E22AB9A180006ABB85 /* ArticleDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76E12AB9A180006ABB85 /* ArticleDetailsScreen.swift */; };
+		864D76E62ABB0E03006ABB85 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 864D76E52ABB0E03006ABB85 /* GoogleSignIn */; };
+		864D76E82ABB0E03006ABB85 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 864D76E72ABB0E03006ABB85 /* GoogleSignInSwift */; };
+		864D76ED2ABB1B31006ABB85 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76EC2ABB1B31006ABB85 /* UserAuthModel.swift */; };
+		864D76EF2ABB3E29006ABB85 /* AuthFlowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D76EE2ABB3E29006ABB85 /* AuthFlowContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +57,14 @@
 		864D76D12AB85372006ABB85 /* NewsSearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchScreen.swift; sourceTree = "<group>"; };
 		864D76D42AB8546A006ABB85 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		864D76D62AB85993006ABB85 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		864D76D82AB85BC5006ABB85 /* SearchPageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageTitle.swift; sourceTree = "<group>"; };
+		864D76D82AB85BC5006ABB85 /* PageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitle.swift; sourceTree = "<group>"; };
 		864D76DA2AB86FF9006ABB85 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		864D76DC2AB981C5006ABB85 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
 		864D76DE2AB98C6F006ABB85 /* ArticlesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListView.swift; sourceTree = "<group>"; };
 		864D76E12AB9A180006ABB85 /* ArticleDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsScreen.swift; sourceTree = "<group>"; };
+		864D76EB2ABB13CA006ABB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		864D76EC2ABB1B31006ABB85 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
+		864D76EE2ABB3E29006ABB85 /* AuthFlowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864D76E62ABB0E03006ABB85 /* GoogleSignIn in Frameworks */,
+				864D76E82ABB0E03006ABB85 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +117,7 @@
 		864D76A32AB723C2006ABB85 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				864D76EB2ABB13CA006ABB85 /* Info.plist */,
 				864D76CF2AB8532E006ABB85 /* Screens */,
 				864D76CE2AB8527F006ABB85 /* Models */,
 				864D76A42AB723C2006ABB85 /* NewsApp.swift */,
@@ -147,6 +157,7 @@
 			children = (
 				864D76D62AB85993006ABB85 /* Theme.swift */,
 				864D76DA2AB86FF9006ABB85 /* News.swift */,
+				864D76EC2ABB1B31006ABB85 /* UserAuthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 		864D76CF2AB8532E006ABB85 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				864D76E32ABAE329006ABB85 /* Shared */,
 				864D76E02AB9A15B006ABB85 /* ArticleDetailsScreen */,
 				864D76D02AB8533E006ABB85 /* NewsSearchScreen */,
 			);
@@ -173,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				864D76D42AB8546A006ABB85 /* SearchBar.swift */,
-				864D76D82AB85BC5006ABB85 /* SearchPageTitle.swift */,
 				864D76DC2AB981C5006ABB85 /* ArticleCardView.swift */,
 				864D76DE2AB98C6F006ABB85 /* ArticlesListView.swift */,
 			);
@@ -186,6 +197,15 @@
 				864D76E12AB9A180006ABB85 /* ArticleDetailsScreen.swift */,
 			);
 			path = ArticleDetailsScreen;
+			sourceTree = "<group>";
+		};
+		864D76E32ABAE329006ABB85 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				864D76D82AB85BC5006ABB85 /* PageTitle.swift */,
+				864D76EE2ABB3E29006ABB85 /* AuthFlowContentView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +224,10 @@
 			dependencies = (
 			);
 			name = News;
+			packageProductDependencies = (
+				864D76E52ABB0E03006ABB85 /* GoogleSignIn */,
+				864D76E72ABB0E03006ABB85 /* GoogleSignInSwift */,
+			);
 			productName = News;
 			productReference = 864D76A12AB723C2006ABB85 /* News.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +300,9 @@
 				Base,
 			);
 			mainGroup = 864D76982AB723C2006ABB85;
+			packageReferences = (
+				864D76E42ABB0E03006ABB85 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 864D76A22AB723C2006ABB85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,8 +349,10 @@
 				864D76D22AB85372006ABB85 /* NewsSearchScreen.swift in Sources */,
 				864D76D72AB85993006ABB85 /* Theme.swift in Sources */,
 				864D76A52AB723C2006ABB85 /* NewsApp.swift in Sources */,
-				864D76D92AB85BC5006ABB85 /* SearchPageTitle.swift in Sources */,
+				864D76D92AB85BC5006ABB85 /* PageTitle.swift in Sources */,
 				864D76E22AB9A180006ABB85 /* ArticleDetailsScreen.swift in Sources */,
+				864D76EF2ABB3E29006ABB85 /* AuthFlowContentView.swift in Sources */,
+				864D76ED2ABB1B31006ABB85 /* UserAuthModel.swift in Sources */,
 				864D76DD2AB981C5006ABB85 /* ArticleCardView.swift in Sources */,
 				864D76D52AB8546A006ABB85 /* SearchBar.swift in Sources */,
 				864D76DF2AB98C6F006ABB85 /* ArticlesListView.swift in Sources */,
@@ -487,6 +516,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"News/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = News/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,6 +545,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"News/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = News/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,6 +676,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		864D76E42ABB0E03006ABB85 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		864D76E52ABB0E03006ABB85 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 864D76E42ABB0E03006ABB85 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		864D76E72ABB0E03006ABB85 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 864D76E42ABB0E03006ABB85 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 864D76992AB723C2006ABB85 /* Project object */;
 }
