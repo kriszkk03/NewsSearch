@@ -14,7 +14,6 @@ struct ArticlesListView: View {
     // AsyncImage!!
     
     var body: some View {
-//        NavigationStack {
             ScrollView {
                 LazyVStack {
                     Section(header: Text("Results for: \(searchText)")) {
@@ -31,7 +30,6 @@ struct ArticlesListView: View {
             }
             .padding()
             .background(Theme.orange.mainColor)
-//        }
     }
 }
 
