@@ -10,7 +10,6 @@ import SwiftUI
 struct PageTitle: View {
     @ObservedObject var userAuthModel: UserAuthModel
     var body: some View {
-        AuthFlowContentView(userAuthModel: userAuthModel)
             Text("Best News App")
                 .font(.system(size: 30, weight: .heavy))
                 .frame(maxWidth: .infinity, alignment: .center)

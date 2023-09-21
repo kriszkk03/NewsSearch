@@ -49,23 +49,6 @@ final class UserAuthModel: ObservableObject {
         }
     }
     
-//    func signIn(){
-//
-//       guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
-//
-//        let signInConfig = GIDConfiguration.init(clientID: "220744142168-noqsi5pi35o37fo8eg63ftkk11ovcdd9.apps.googleusercontent.com")
-//        GIDSignIn.sharedInstance.signIn(
-//            with: signInConfig,
-//            presenting: presentingViewController,
-//            callback: { user, error in
-//                if let error = error {
-//                    self.errorMessage = "error: \(error.localizedDescription)"
-//                }
-//                self.checkStatus()
-//            }
-//        )
-//    }
-    
     func handleSignInButton() {
         if let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController {
             GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { signInResult, error in

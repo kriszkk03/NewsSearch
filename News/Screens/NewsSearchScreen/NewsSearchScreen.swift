@@ -32,20 +32,23 @@ struct NewsSearchScreen: View {
                         }
                     }
                     .toolbar {
-                        Text(userAuthModel.givenName)
-                        if userAuthModel.isLoggedIn == false {
-                            GoogleSignInButton(action: userAuthModel.handleSignInButton)
-                        } else {
-                            Button(action: userAuthModel.signOut) {
-                                Text("Log out")
+                            if userAuthModel.isLoggedIn == false {
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    GoogleSignInButton(action: userAuthModel.handleSignInButton)
+                                }
+                            } else {
+                                ToolbarItem(placement: .navigationBarLeading) {
+                                    AuthFlowContentView(userAuthModel: userAuthModel)
+                                }
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button(action: userAuthModel.signOut) {
+                                        Text("Log out")
+                                    }
+                                    .padding(5.0)
+                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                    .foregroundColor(.black)
+                                }
                             }
-                            .padding([.top, .bottom, .trailing], 5.0)
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(.black)
-                        }
-                        
-                   
-                        
                     }
                 }
             }
